@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FiChevronDown } from "react-icons/fi";
-import { BiColor, BiShow } from "react-icons/bi";
+import { BiShow } from "react-icons/bi";
 import Popup from './Popup';
 
 
@@ -10,7 +10,6 @@ export default function AccordionMenu() {
   const [isNestedOpen, setIsNestedOpen] = useState(false);
   const [isDeepNestedOpen, setIsDeepNestedOpen] = useState(false);
 
-  
   const [isMasterPopupOpen, setMasterPopupOpen] = useState(false);
   const [isTeamLeaderPopupOpen, setTeamLeaderPopupOpen] = useState(false);
   const [isAgentPopupOpen, setAgentPopupOpen] = useState(false);
@@ -26,9 +25,6 @@ export default function AccordionMenu() {
   const toggleDeepNestedAccordion = () => {
     setIsDeepNestedOpen(!isDeepNestedOpen);
   };
-
-  
-
 
   const openMasterPopup = () => {
     setMasterPopupOpen(true);
@@ -57,8 +53,6 @@ export default function AccordionMenu() {
 
 
 
-
-
   return (
     <div className='justify-center flex '>
       <div className=' mt-[150px] overflow-hidden  p-6 '>
@@ -70,7 +64,8 @@ export default function AccordionMenu() {
           <input type='checkbox' className='absolute peer opacity-0' id='input' />
 
           
-          <label htmlFor='input' className=' font-lato   tracking-[1px] mx-[0px] h-[80px] flex items-center cursor-pointer bg-white rounded-t-lg  ' onClick={toggleAccordion}>
+          <label htmlFor='input' className=' font-lato tracking-[1px] mx-[0px] h-[80px] flex items-center cursor-pointer bg-white rounded-t-lg  ' 
+          onClick={toggleAccordion}>
            
             <img src="/images/rrr.jpg" alt="profile" className=" w-[50px] h-[50px] rounded-full  ml-[30px]" />
             <span className='ml-[20px] font-bold'>kobe bryant</span>
